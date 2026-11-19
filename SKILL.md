@@ -5,6 +5,8 @@ description: "Trace citations and discover related literature from a supplied re
 
 # citegraph — Citation Tracing and Related-literature Discovery
 
+> **脚本路径**：本技能安装于 `/skills/weekly-skill/`，脚本绝对路径为 `/skills/weekly-skill/scripts/`（工作目录是 `/app/work`，不要用相对路径）。
+
 Turn a retained reference graph into a navigable citation network: who cites whom, what sits one or two hops away from a seed, which papers bridge clusters. The failure mode this skill exists to prevent: "related papers" with no traceable link, seeds silently dropped, and identifiers that should be the same paper treated as different.
 
 **Method in one line:** normalize ids (DOI/title) → build directed graph → BFS both directions up to N hops → components + bridgers → report with per-edge provenance.
@@ -17,7 +19,7 @@ Turn a retained reference graph into a navigable citation network: who cites who
 ## Pipeline
 
 ```bash
-python3 scripts/citegraph.py --case /input/case.json --work /app/work
+python3 /skills/weekly-skill/scripts/citegraph.py --case /input/case.json --work /app/work
 ```
 
 1. **Normalize** DOI/title into one key space (lowercase, URL prefix stripped, non-alphanumerics to spaces).
