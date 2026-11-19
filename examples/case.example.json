@@ -1,0 +1,12 @@
+{
+  "case_id": "example-cite",
+  "depth": 2,
+  "seeds": ["10.1000/A"],
+  "records": [
+    {"id": "10.1000/A", "title": "Attention is all you need", "references": ["10.1000/B", "10.1000/C"]},
+    {"id": "10.1000/B", "title": "Seq2seq with RNN", "references": ["10.1000/D"]},
+    {"id": "10.1000/C", "title": "Convolutional S2S", "references": ["10.1000/D"]},
+    {"id": "10.1000/D", "title": "Early NMT"},
+    {"id": "10.1000/E", "title": "Unrelated"}
+  ]
+}
